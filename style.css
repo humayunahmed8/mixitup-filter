@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@400;600&display=swap');
+
+/* Mixitup CSS */
+
+.filter-boxes .mix {
+    display: none;
+}
+
+
+/* Main CSS */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #969595;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Bree Serif', serif;
+}
+
+
+.filter-control ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.filter-control ul li {
+    display: inline-block;
+}
+
+.filter-control ul li {
+    padding: 15px 30px;
+    background: #E6E5E5;
+    color: #333333;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-control {margin-bottom: 50px;}
+
+.portfolio-area {
+    padding: 100px 0;
+}
+
+.filter-control ul li.active {
+    background: #7CE8E3;
+}
+
+img {
+    width: 100%;
+}
+
+.single-filter {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.filter-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgba(124,232,227,0.5);
+    /* opacity: 0.5; */
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.filter-overlay i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.single-filter:hover {}
+
+.single-filter:hover .filter-overlay {transform: scale(1);left: 0;}
+
+.single-filter {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 500px){
+    .filter-control ul li {
+        margin-bottom: 15px;
+        margin-right: 15px;
+    }
+    
+    .filter-control ul li:last-of-type {
+        margin: 0;
+    }
+
+    .portfolio-area{
+        padding: 40px 0;
+    }
+}
